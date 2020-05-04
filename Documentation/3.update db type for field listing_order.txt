@@ -1,0 +1,4 @@
+NOTE: modify column in table from tinyint to int
+
+ALTER TABLE nummerbran.companies
+modify listing_order int;

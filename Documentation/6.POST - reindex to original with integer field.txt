@@ -1,0 +1,19 @@
+NOTE: Copy data to newly created index from temp index
+
+POST
+XXXX:9200/_reindex
+
+{
+  "source": {
+    "index": "sqldata_t"
+  },
+  "dest": {
+    "index": "sqldata"
+  }
+}
+
+
+NOTE: DELETE temp index
+
+DELETE
+http://XXXX:9200/sqldata_t

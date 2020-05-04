@@ -1,0 +1,13 @@
+NOTE: Copy data from sqldata index to new temp index excluding listing_order attribute
+
+POST
+XXXX:9200/_reindex
+
+{
+  "source": {
+    "index": "sqldata","_source": ["company_id", "update_approved", "address", "logotype", "mailing_address", "slug", "key_words", "category", "county", "postalcode", "activity", "contact_person", "updated_on", "epost", "municipality", "latitude", "organisation_number", "name", "legal_name", "longitude", "updated_by", "@timestamp", "active", "tel", "homepage", "city"]
+  },
+  "dest": {
+    "index": "sqldata_t"
+  }
+}

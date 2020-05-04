@@ -1,0 +1,7 @@
+NOTE: update temp index with etl process.
+
+run the command:
+
+python Main.py
+
+this will update listing_order values form db to elasticsearch
